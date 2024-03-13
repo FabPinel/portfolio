@@ -6,6 +6,7 @@ import HeroSection from "@/Components/Section/HeroSection";
 import SkillsSection from "@/Components/Section/SkillsSection";
 import ContactSection from "@/Components/Section/ContactSection";
 import EducationSection from "@/Components/Section/EducationSection";
+import ProjectsSection from "@/Components/Section/ProjectsSection";
 
 export default function Welcome({
     auth,
@@ -55,6 +56,7 @@ export default function Welcome({
                 <HeroSection darkMode={darkMode}></HeroSection>
             </div>
             <SkillsSection darkMode={darkMode}></SkillsSection>
+            <ProjectsSection darkMode={darkMode}></ProjectsSection>
             <EducationSection darkMode={darkMode}></EducationSection>
             <ContactSection darkMode={darkMode}></ContactSection>
         </>
