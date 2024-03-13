@@ -44,7 +44,7 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                 management. I am actively looking for an
                                 internship as a developer or Product Owner.
                             </p>
-                            <div className="mt-10 flex items-center gap-x-6 flex-wrap">
+                            <div className="mt-10 flex items-center gap-x-6 flex-wrap mx-auto justify-center">
                                 <a
                                     href="https://github.com/FabPinel"
                                     className={`transition-all ease-in duration-100 text-white ${

@@ -4,6 +4,7 @@ import SwitchMode from "@/Components/SwitchMode";
 import { useState } from "react";
 import HeroSection from "@/Components/HeroSection";
 import SkillsSection from "@/Components/SkillsSection";
+import ContactSection from "@/Components/ContactSection";
 
 export default function Welcome({
     auth,
@@ -53,6 +54,7 @@ export default function Welcome({
                 <HeroSection darkMode={darkMode}></HeroSection>
             </div>
             <SkillsSection darkMode={darkMode}></SkillsSection>
+            <ContactSection darkMode={darkMode}></ContactSection>
         </>
     );
 }
