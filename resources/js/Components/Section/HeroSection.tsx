@@ -4,12 +4,15 @@ import { FaEnvelope } from "react-icons/fa";
 
 interface HeroProps {
     darkMode: boolean;
-    setDarkMode: (darkMode: boolean) => void;
 }
 
-export default function HeroSection({ darkMode, setDarkMode }: HeroProps) {
+export default function HeroSection({ darkMode }: HeroProps) {
     return (
-        <div className="relative isolate overflow-hidden">
+        <div
+            className={`${
+                darkMode ? "bg-bgdark" : "bg-bglight"
+            } relative isolate overflow-hidden`}
+        >
             <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
                 <div className="px-6 lg:px-0 lg:pt-4">
                     <div className="mx-auto max-w-2xl">
@@ -41,7 +44,7 @@ export default function HeroSection({ darkMode, setDarkMode }: HeroProps) {
                                 management. I am actively looking for an
                                 internship as a developer or Product Owner.
                             </p>
-                            <div className="mt-10 flex items-center gap-x-6 flex-wrap">
+                            <div className="mt-10 flex items-center gap-x-6 flex-wrap mx-auto justify-center">
                                 <a
                                     href="https://github.com/FabPinel"
                                     className={`transition-all ease-in duration-100 text-white ${
