@@ -7,6 +7,7 @@ import SkillsSection from "@/Components/Section/SkillsSection";
 import ContactSection from "@/Components/Section/ContactSection";
 import EducationSection from "@/Components/Section/EducationSection";
 import ProjectsSection from "@/Components/Section/ProjectsSection";
+import NavBar from "@/Components/NavBar";
 
 export default function Welcome({
     auth,
@@ -15,50 +16,15 @@ export default function Welcome({
 
     return (
         <>
-            <Head title="Welcome" />
-            <div
-                className={`${
-                    darkMode ? "bg-bgdark" : "bg-bglight"
-                } relative sm:flex sm:justify-center sm:items-center min-h-screen`}
-            >
-                <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end flex">
-                    {auth.user ? (
-                        <Link
-                            href={route("dashboard")}
-                            className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                        >
-                            Dashboard
-                        </Link>
-                    ) : (
-                        <>
-                            <Link
-                                href={route("login")}
-                                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Log in
-                            </Link>
-
-                            <Link
-                                href={route("register")}
-                                className="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Register
-                            </Link>
-                        </>
-                    )}
-                    <div className="ml-4">
-                        <SwitchMode
-                            setDarkMode={setDarkMode}
-                            darkMode={darkMode}
-                        />
-                    </div>
-                </div>
+            <div className={`${darkMode ? "bg-bgdark" : "bg-bglight"} `}>
+                <NavBar setDarkMode={setDarkMode} darkMode={darkMode}></NavBar>
+                <Head title="Welcome" />
                 <HeroSection darkMode={darkMode}></HeroSection>
+                <SkillsSection darkMode={darkMode}></SkillsSection>
+                <ProjectsSection darkMode={darkMode}></ProjectsSection>
+                <EducationSection darkMode={darkMode}></EducationSection>
+                <ContactSection darkMode={darkMode}></ContactSection>
             </div>
-            <SkillsSection darkMode={darkMode}></SkillsSection>
-            <ProjectsSection darkMode={darkMode}></ProjectsSection>
-            <EducationSection darkMode={darkMode}></EducationSection>
-            <ContactSection darkMode={darkMode}></ContactSection>
         </>
     );
 }
