@@ -3,11 +3,10 @@ import { PageProps } from "@/types";
 import SwitchMode from "@/Components/SwitchMode";
 import { useState } from "react";
 import HeroSection from "@/Components/HeroSection";
+import SkillsSection from "@/Components/SkillsSection";
 
 export default function Welcome({
     auth,
-    laravelVersion,
-    phpVersion,
 }: PageProps<{ laravelVersion: string; phpVersion: string }>) {
     const [darkMode, setDarkMode] = useState(false);
 
@@ -51,11 +50,9 @@ export default function Welcome({
                         />
                     </div>
                 </div>
-                <HeroSection
-                    setDarkMode={setDarkMode}
-                    darkMode={darkMode}
-                ></HeroSection>
+                <HeroSection darkMode={darkMode}></HeroSection>
             </div>
+            <SkillsSection darkMode={darkMode}></SkillsSection>
         </>
     );
 }
