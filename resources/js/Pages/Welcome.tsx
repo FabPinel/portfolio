@@ -2,9 +2,10 @@ import { Link, Head } from "@inertiajs/react";
 import { PageProps } from "@/types";
 import SwitchMode from "@/Components/SwitchMode";
 import { useState } from "react";
-import HeroSection from "@/Components/HeroSection";
-import SkillsSection from "@/Components/SkillsSection";
-import ContactSection from "@/Components/ContactSection";
+import HeroSection from "@/Components/Section/HeroSection";
+import SkillsSection from "@/Components/Section/SkillsSection";
+import ContactSection from "@/Components/Section/ContactSection";
+import EducationSection from "@/Components/Section/EducationSection";
 
 export default function Welcome({
     auth,
@@ -54,6 +55,7 @@ export default function Welcome({
                 <HeroSection darkMode={darkMode}></HeroSection>
             </div>
             <SkillsSection darkMode={darkMode}></SkillsSection>
+            <EducationSection darkMode={darkMode}></EducationSection>
             <ContactSection darkMode={darkMode}></ContactSection>
         </>
     );

@@ -1,4 +1,3 @@
-import { FiMapPin } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
