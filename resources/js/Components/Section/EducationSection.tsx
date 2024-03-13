@@ -66,7 +66,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                                             : "text-primarylight"
                                     } mt-1 block text-sm font-semibold`}
                                 >
-                                    2024
+                                    2023 - 2024
                                 </span>
                             </div>
                         </div>
@@ -115,7 +115,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                                             : "text-primarylight"
                                     } mt-1 block text-sm font-semibold`}
                                 >
-                                    2023
+                                    2021 - 2023
                                 </span>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                                             : "text-primarylight"
                                     } mt-1 block text-sm font-semibold`}
                                 >
-                                    2021
+                                    2020 - 2021
                                 </span>
                             </div>
                         </div>
