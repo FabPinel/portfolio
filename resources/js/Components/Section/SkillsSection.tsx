@@ -16,7 +16,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
             >
                 <h2>Skills</h2>
             </div>
-            <div className="w-full mt-10 grid grid-cols-5 justify-center items-center">
+            <div className="w-full mt-10 justify-center items-center flex flex-wrap mx-auto space-x-4 sm:space-x-10 md:space-x-44 lg:space-x-44">
                 <div>
                     <h3
                         className={`${
