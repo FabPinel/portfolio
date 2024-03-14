@@ -27,7 +27,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="https://github.com/FabPinel"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >
@@ -38,7 +38,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="https://www.linkedin.com/in/fabien-pinel/"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >
@@ -49,7 +49,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="mailto:fabien.pinel08@outlook.fr"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >
