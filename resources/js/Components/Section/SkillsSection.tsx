@@ -19,8 +19,8 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
             >
                 <h2>Skills</h2>
             </div>
-            <div className="w-full mt-10 justify-center items-center flex flex-wrap mx-auto space-x-4 sm:space-x-10 md:space-x-44 lg:space-x-44">
-                <div>
+            <div className="w-full mt-10 lg:justify-center flex flex-wrap mx-auto px-5">
+                <div className="mr-5 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -45,7 +45,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         figma
                     </p>
                 </div>
-                <div>
+                <div className="mr-5 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -70,7 +70,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         tailwind
                     </p>
                 </div>
-                <div>
+                <div className="mr-5 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -95,7 +95,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         mysql
                     </p>
                 </div>
-                <div>
+                <div className="mr-5 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -120,7 +120,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         specification
                     </p>
                 </div>
-                <div>
+                <div className="mr-5 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
