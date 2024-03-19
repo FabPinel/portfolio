@@ -8,7 +8,10 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
     const skillsRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div id="skills" className="mx-auto max-w-7xl mt-20">
+        <div
+            id="skills"
+            className="mx-auto max-w-7xl mt-20 py-10 md:py-20 lg:md:py-20"
+        >
             <div
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"

@@ -7,7 +7,10 @@ interface ContactProps {
 
 export default function ContactSection({ darkMode }: ContactProps) {
     return (
-        <div id="contact" className="mx-auto w-full pt-32">
+        <div
+            id="contact"
+            className="mx-auto w-full py-10 md:py-20 lg:md:py-20 px-2 md:px-60"
+        >
             <div
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"
@@ -18,7 +21,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
             <p
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"
-                } mx-auto text-center mt-6 text-lg`}
+                } mx-auto text-center mt-10 text-lg`}
             >
                 Feel free to contact me by email or through my social networks.
             </p>
