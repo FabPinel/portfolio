@@ -120,7 +120,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         specification
                     </p>
                 </div>
-                <div className="mr-5 md:mr-32 lg:mr-32">
+                <div>
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
