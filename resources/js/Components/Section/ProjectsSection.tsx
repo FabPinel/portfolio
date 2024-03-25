@@ -9,7 +9,7 @@ export default function ProjectsSection({ darkMode }: ProjectsProps) {
     return (
         <div
             id="projects"
-            className="mx-auto max-w-xl px-4 pt-32  lg:max-w-7xl lg:px-8"
+            className="mx-auto max-w-xl px-4 pt-32 lg:max-w-7xl lg:px-8 py-10 md:py-20 lg:md:py-20"
         >
             <div
                 className={`${

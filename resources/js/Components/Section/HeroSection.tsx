@@ -13,11 +13,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                 darkMode ? "bg-bgdark" : "bg-bglight"
             } relative isolate overflow-hidden`}
         >
-            <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-                <div className="px-6 lg:px-0 lg:pt-4">
+            <div className="mx-auto max-w-7xl flex flex-wrap justify-center py-0 md:py-40 lg:md:py-40">
+                <div className="px-6 lg:px-0">
                     <div className="mx-auto max-w-2xl">
                         <div className="max-w-lg">
-                            <div className="mt-24 sm:mt-32 lg:mt-16">
+                            <div className="mt-2 sm:mt-32 lg:mt-16">
                                 <span
                                     className={`${
                                         darkMode
@@ -49,7 +49,7 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                     href="https://github.com/FabPinel"
                                     className={`transition-all ease-in duration-100 text-white ${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                                             : "bg-primarylight hover:bg-primarylighthover "
                                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                                 >
@@ -63,7 +63,7 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                     href="https://www.linkedin.com/in/fabien-pinel/"
                                     className={`transition-all ease-in duration-100 text-white ${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                                             : "bg-primarylight hover:bg-primarylighthover "
                                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                                 >
@@ -77,7 +77,7 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                     href="mailto:fabien.pinel08@outlook.fr"
                                     className={`transition-all ease-in duration-100 text-white ${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                                             : "bg-primarylight hover:bg-primarylighthover "
                                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                                 >

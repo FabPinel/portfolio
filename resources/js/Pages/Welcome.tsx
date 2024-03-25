@@ -8,6 +8,7 @@ import ContactSection from "@/Components/Section/ContactSection";
 import EducationSection from "@/Components/Section/EducationSection";
 import ProjectsSection from "@/Components/Section/ProjectsSection";
 import NavBar from "@/Components/NavBar";
+import Footer from "@/Components/Footer";
 
 export default function Welcome({
     auth,
@@ -24,6 +25,7 @@ export default function Welcome({
                 <ProjectsSection darkMode={darkMode}></ProjectsSection>
                 <EducationSection darkMode={darkMode}></EducationSection>
                 <ContactSection darkMode={darkMode}></ContactSection>
+                <Footer darkMode={darkMode}></Footer>
             </div>
         </>
     );

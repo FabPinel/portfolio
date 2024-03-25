@@ -7,7 +7,10 @@ interface ContactProps {
 
 export default function ContactSection({ darkMode }: ContactProps) {
     return (
-        <div id="contact" className="mx-auto w-full pt-32">
+        <div
+            id="contact"
+            className="mx-auto w-full py-10 md:py-20 lg:md:py-20 px-2 md:px-60"
+        >
             <div
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"
@@ -18,7 +21,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
             <p
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"
-                } mx-auto text-center mt-6 text-lg`}
+                } mx-auto text-center mt-10 text-lg`}
             >
                 Feel free to contact me by email or through my social networks.
             </p>
@@ -27,7 +30,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="https://github.com/FabPinel"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >
@@ -38,7 +41,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="https://www.linkedin.com/in/fabien-pinel/"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >
@@ -49,7 +52,7 @@ export default function ContactSection({ darkMode }: ContactProps) {
                     href="mailto:fabien.pinel08@outlook.fr"
                     className={`transition-all ease-in duration-100 text-white ${
                         darkMode
-                            ? "bg-primarydark hover:bg-primarydarkhover text-txtdarkbutton"
+                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
                             : "bg-primarylight hover:bg-primarylighthover "
                     } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
                 >

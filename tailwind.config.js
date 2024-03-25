@@ -24,7 +24,6 @@ export default {
                 accentlight: "#00A2C7",
                 bgdark: "#040A0B",
                 txtdark: "#B5E6F2",
-                txtdarkbutton: "#0D1516",
                 primarydark: "#44D7F8",
                 primarydarkhover: "#3dbedb",
                 secondarydark: "#0F4348",

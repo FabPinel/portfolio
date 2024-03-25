@@ -8,7 +8,10 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
     const skillsRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div id="skills" className="mx-auto max-w-7xl mt-20">
+        <div
+            id="skills"
+            className="mx-auto max-w-7xl mt-20 py-10 md:py-20 lg:md:py-20"
+        >
             <div
                 className={`${
                     darkMode ? "text-txtdark" : "text-txtlight"
@@ -16,8 +19,8 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
             >
                 <h2>Skills</h2>
             </div>
-            <div className="w-full mt-10 grid grid-cols-5 justify-center items-center">
-                <div>
+            <div className="w-full mt-10 lg:justify-center flex mx-auto px-5 overflow-x-auto">
+                <div className="flex-shrink-0 mr-10 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -42,7 +45,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         figma
                     </p>
                 </div>
-                <div>
+                <div className="flex-shrink-0 mr-10 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -67,7 +70,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         tailwind
                     </p>
                 </div>
-                <div>
+                <div className="flex-shrink-0 mr-10 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -92,7 +95,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         mysql
                     </p>
                 </div>
-                <div>
+                <div className="flex-shrink-0 mr-10 md:mr-32 lg:mr-32">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
@@ -117,7 +120,7 @@ export default function SkillsSection({ darkMode }: SkillsProps) {
                         specification
                     </p>
                 </div>
-                <div>
+                <div className="flex-shrink-0">
                     <h3
                         className={`${
                             darkMode ? "text-txtdark" : "text-txtlight"
