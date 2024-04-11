@@ -26,7 +26,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::match(['get', 'delete'], '/dashboard', [StackController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::match(['get', 'put', 'delete'], '/dashboard', [StackController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/admin/stacks/create', [StackController::class, 'create'])->name('stacks.create');
 Route::post('/admin/stacks', [StackController::class, 'store'])->name('stacks.store');
 Route::get('/admin/stacks/{stack}/edit', [StackController::class, 'edit'])->name('stacks.edit');

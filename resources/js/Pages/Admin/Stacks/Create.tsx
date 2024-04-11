@@ -67,7 +67,7 @@ export default function CreateStack({ auth }: PageProps) {
                                         Nom
                                     </label>
                                     <div className="mt-2">
-                                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-primarylight sm:max-w-md">
                                             <input
                                                 type="text"
                                                 name="name"
@@ -84,7 +84,7 @@ export default function CreateStack({ auth }: PageProps) {
                         <div className="flex items-center justify-end gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
                             <button
                                 type="submit"
-                                className="rounded-md bg-[#1c3242] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#374a56] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="rounded-md bg-primarylight px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primarylighthover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primarylight"
                             >
                                 Sauvegarder
                             </button>
