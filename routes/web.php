@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StackController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,9 +26,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::match(['get', 'delete'], '/dashboard', [StackController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/stacks/create', [StackController::class, 'create'])->name('stacks.create');
+Route::post('/admin/stacks', [StackController::class, 'store'])->name('stacks.store');
+Route::get('/admin/stacks/{stack}/edit', [StackController::class, 'edit'])->name('stacks.edit');
+Route::put('/admin/stacks/{stack}', [StackController::class, 'update'])->name('stacks.update');
+Route::delete('/admin/stacks/{stack}', [StackController::class, 'destroy'])->name('stacks.destroy');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
