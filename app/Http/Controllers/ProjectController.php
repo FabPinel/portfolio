@@ -17,7 +17,7 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return Inertia::render('Admin/projects/Create');
+        return Inertia::render('Admin/Projects/Create');
     }
 
     public function store(Request $request)
