@@ -10,6 +10,21 @@ export interface Stack {
     name: string;
 }
 
+export interface Project {
+    id: number;
+    img: string;
+    title: string;
+    desc: string;
+    start: string;
+    end: string;
+    context: string;
+    tasks: string;
+    conclusions: string;
+    url: string;
+    github: string;
+    category: string;
+}
+
 export type PageProps<
     T extends Record<string, unknown> = Record<string, unknown>
 > = T & {
@@ -17,4 +32,5 @@ export type PageProps<
         user: User;
     };
     stacks: Stack[];
+    projects: Project[];
 };

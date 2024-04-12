@@ -25,8 +25,6 @@ return new class extends Migration
             $table->string('github')->nullable();
             $table->string('category');
             
-            $table->foreignId('stack_id')->constrained('stacks');
-            
             $table->timestamps();
         });
     }
