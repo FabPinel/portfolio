@@ -21,11 +21,17 @@ class ProjectController extends Controller
     }
 
     public function store(Request $request)
-    {
-        Project::create($request->all());
-
+    {    
+        $imageName = $request->file('img')->getClientOriginalName();
+        $request->file('img')->storeAs('assets/img', $imageName);
+    
+        $projectData = $request->except('img');
+        $projectData['img'] = $imageName;
+        Project::create($projectData);
+    
         return redirect()->route('dashboard');
     }
+    
 
     public function edit(Project $project)
     {
@@ -45,7 +51,14 @@ class ProjectController extends Controller
 
     public function destroy(Project $project)
     {
+        $imagePath = public_path('assets/img/' . $project->img);
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+    
         $project->delete();
+    
         return redirect()->route('dashboard');
     }
+    
 }

@@ -33,8 +33,9 @@ export default function CreateProject({ auth }: PageProps) {
             .querySelector('meta[name="csrf-token"]')
             ?.getAttribute("content");
 
+        const formData = new FormData(e.target as HTMLFormElement);
+
         const headers: Record<string, string> = {
-            "Content-Type": "application/json",
             Accept: "application/json",
         };
 
@@ -46,7 +47,7 @@ export default function CreateProject({ auth }: PageProps) {
             const response = await fetch("/admin/projects", {
                 method: "POST",
                 headers: headers,
-                body: JSON.stringify(formData),
+                body: formData,
             });
 
             if (response.ok) {
