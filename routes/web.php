@@ -43,16 +43,13 @@ Route::post('/admin/projects', [ProjectController::class, 'store'])->name('proje
 Route::get('/admin/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
 Route::put('/admin/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
 Route::delete('/admin/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/project/{id}', [ProjectController::class, 'show'])->name('getproject');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::get('/project', function () {
-    return Inertia::render('Project', [
-    ]);
 });
 
 require __DIR__.'/auth.php';
