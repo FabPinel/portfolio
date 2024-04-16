@@ -23,7 +23,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {    
         $imageName = $request->file('img')->getClientOriginalName();
-        $request->file('img')->storeAs('assets/img', $imageName);
+        $request->file('img')->storeAs('public/img', $imageName);
     
         $projectData = $request->except('img');
         $projectData['img'] = $imageName;

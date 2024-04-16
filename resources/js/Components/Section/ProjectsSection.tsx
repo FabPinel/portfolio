@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import ecoservice from "../../../../assets/img/mockup-eco-service.webp";
 
 interface Project {
     id: number;
     title: string;
     desc: string;
-    stacks: { name: string }[]; // Mettez à jour le type des stacks
+    img: string;
+    stacks: { name: string }[];
 }
 
 interface ProjectsProps {
@@ -49,7 +49,7 @@ const ProjectsSection: React.FC<ProjectsProps> = ({ darkMode }) => {
                             className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75"
                         >
                             <img
-                                src={ecoservice}
+                                src={`/storage/img/${project.img}`}
                                 alt="Project"
                                 className="h-52 w-96 object-cover object-center"
                             />
