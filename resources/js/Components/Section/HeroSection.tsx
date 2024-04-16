@@ -1,17 +1,28 @@
 import { FiMapPin } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 interface HeroProps {
     darkMode: boolean;
 }
 
 export default function HeroSection({ darkMode }: HeroProps) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 125);
+        return () => clearTimeout(timer);
+    }, []);
     return (
         <div
             className={`${
                 darkMode ? "bg-bgdark" : "bg-bglight"
-            } relative isolate overflow-hidden`}
+            } relative isolate overflow-hidden transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
             <div className="mx-auto max-w-7xl flex flex-wrap justify-center py-0 md:py-40 lg:md:py-40">
                 <div className="px-6 lg:px-0">
