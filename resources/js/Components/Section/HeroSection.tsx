@@ -13,7 +13,7 @@ export default function HeroSection({ darkMode }: HeroProps) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(true);
-        }, 125);
+        }, 75);
         return () => clearTimeout(timer);
     }, []);
     return (
