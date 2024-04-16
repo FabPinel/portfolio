@@ -1,17 +1,28 @@
 import { FiMapPin } from "react-icons/fi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 interface HeroProps {
     darkMode: boolean;
 }
 
 export default function HeroSection({ darkMode }: HeroProps) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 45);
+        return () => clearTimeout(timer);
+    }, []);
     return (
         <div
             className={`${
                 darkMode ? "bg-bgdark" : "bg-bglight"
-            } relative isolate overflow-hidden`}
+            } relative isolate overflow-hidden transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+            }`}
         >
             <div className="mx-auto max-w-7xl flex flex-wrap justify-center py-0 md:py-40 lg:md:py-40">
                 <div className="px-6 lg:px-0">
@@ -47,11 +58,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                             <div className="mt-10 flex items-center gap-x-6 flex-wrap mx-auto justify-center">
                                 <a
                                     href="https://github.com/FabPinel"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaGithub
                                         className="w-4 h-4 me-2"
@@ -61,11 +72,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/fabien-pinel/"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaLinkedinIn
                                         className="w-4 h-4 me-2"
@@ -75,11 +86,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                 </a>
                                 <a
                                     href="mailto:fabien.pinel08@outlook.fr"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaEnvelope
                                         className="w-4 h-4 me-2"

@@ -10,10 +10,10 @@ class Stack extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
-    
+
     public function projects()
     {
-        return $this->hasMany(Project::class);
+        return $this->belongsToMany(Project::class, 'project_stacks', 'stack_id', 'project_id');
     }
 }
 

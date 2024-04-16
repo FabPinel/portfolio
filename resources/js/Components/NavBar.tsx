@@ -65,9 +65,15 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                                 />
                             </div>
 
-                            <div className="-mr-2 flex sm:hidden">
+                            <div className="mr-2 flex sm:hidden">
                                 {/* Mobile menu button */}
-                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button
+                                    className={`${
+                                        darkMode
+                                            ? "text-bgdark bg-primarydark hover:bg-primarydarkhover"
+                                            : "text-bglight bg-primarylight hover:bg-primarylighthover"
+                                    } ml-4 relative inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white`}
+                                >
                                     <span className="absolute -inset-0.5" />
                                     <span className="sr-only">
                                         Open main menu
@@ -88,7 +94,11 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
+                    <Disclosure.Panel
+                        className={`${
+                            darkMode ? "bg-bgdark" : "bg-bglight"
+                        } sm:hidden z-50 fixed w-full `}
+                    >
                         <div className="space-y-1 px-2 pb-3 pt-2">
                             <div className="hidden sm:ml-6 sm:block">
                                 <SwitchMode
@@ -98,25 +108,41 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                             </div>
                             <a
                                 href="#skills"
-                                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                                className={`${
+                                    darkMode
+                                        ? "text-txtdark bg-secondarydark hover:bg-primarydarkhover hover:text-bgdark"
+                                        : "text-txtlight bg-secondarylight hover:bg-primarylighthover hover:text-bglight"
+                                } block rounded-md px-3 py-2 text-base font-medium `}
                             >
                                 Skills
                             </a>
                             <a
                                 href="#projects"
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                                className={`${
+                                    darkMode
+                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                } block rounded-md px-3 py-2 text-base font-medium `}
                             >
                                 Projects
                             </a>
                             <a
                                 href="#education"
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                                className={`${
+                                    darkMode
+                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                } block rounded-md px-3 py-2 text-base font-medium `}
                             >
                                 Education
                             </a>
                             <a
                                 href="#contact"
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                                className={`${
+                                    darkMode
+                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                } block rounded-md px-3 py-2 text-base font-medium `}
                             >
                                 Contact
                             </a>
