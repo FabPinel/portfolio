@@ -1,6 +1,5 @@
-import { Link, Head } from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 import { PageProps } from "@/types";
-import SwitchMode from "@/Components/SwitchMode";
 import { useState } from "react";
 import HeroSection from "@/Components/Section/HeroSection";
 import SkillsSection from "@/Components/Section/SkillsSection";
