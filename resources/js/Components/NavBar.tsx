@@ -65,7 +65,7 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                                 />
                             </div>
 
-                            <div className="-mr-2 flex sm:hidden">
+                            <div className="mr-2 flex sm:hidden">
                                 {/* Mobile menu button */}
                                 <Disclosure.Button
                                     className={`${
@@ -94,7 +94,11 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="sm:hidden">
+                    <Disclosure.Panel
+                        className={`${
+                            darkMode ? "bg-bgdark" : "bg-bglight"
+                        } sm:hidden z-50 fixed w-full `}
+                    >
                         <div className="space-y-1 px-2 pb-3 pt-2">
                             <div className="hidden sm:ml-6 sm:block">
                                 <SwitchMode
