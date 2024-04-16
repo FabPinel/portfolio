@@ -47,11 +47,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                             <div className="mt-10 flex items-center gap-x-6 flex-wrap mx-auto justify-center">
                                 <a
                                     href="https://github.com/FabPinel"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaGithub
                                         className="w-4 h-4 me-2"
@@ -61,11 +61,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/fabien-pinel/"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaLinkedinIn
                                         className="w-4 h-4 me-2"
@@ -75,11 +75,11 @@ export default function HeroSection({ darkMode }: HeroProps) {
                                 </a>
                                 <a
                                     href="mailto:fabien.pinel08@outlook.fr"
-                                    className={`transition-all ease-in duration-100 text-white ${
+                                    className={`${
                                         darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-black"
-                                            : "bg-primarylight hover:bg-primarylighthover "
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 transition-all ease-in duration-100`}
                                 >
                                     <FaEnvelope
                                         className="w-4 h-4 me-2"
