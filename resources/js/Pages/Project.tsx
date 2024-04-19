@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaGithub, FaLaptop } from "react-icons/fa";
-import ecoservice from "../../../assets/img/mockup-eco-service.webp";
+import { FaGithub, FaLaptop, FaAngleLeft } from "react-icons/fa";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 
@@ -46,6 +45,16 @@ const ProjectDetails: React.FC<ProjectsProps> = () => {
     return (
         <div className={`${darkMode ? "bg-bgdark" : "bg-bglight"} `}>
             <NavBar setDarkMode={setDarkMode} darkMode={darkMode}></NavBar>
+            <a
+                href="/"
+                className={`transition-all ease-in duration-100 ${
+                    darkMode
+                        ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                        : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5 ml-8`}
+            >
+                <FaAngleLeft className="h-4" aria-hidden="true" />
+            </a>
             {project ? (
                 <div className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
