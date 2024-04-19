@@ -5,7 +5,7 @@ interface FooterProps {
 export default function Footer({ darkMode }: FooterProps) {
     return (
         <footer className="rounded-lg">
-            <div className="w-full p-4 text-center">
+            <div className="w-full px-4 text-center">
                 <span className="text-sm text-gray-500 sm:text-center">
                     © 2024{" "}
                     <a
@@ -15,6 +15,12 @@ export default function Footer({ darkMode }: FooterProps) {
                         Fabien Pinel
                     </a>
                     . All Rights Reserved.
+                </span>
+            </div>
+            <div className="w-full p-4 text-center">
+                <span className="text-sm text-gray-500 sm:text-center">
+                    This portfolio was made with : React JS, TypeScript,
+                    Tailwind CSS, Laravel and PhpUnit
                 </span>
             </div>
         </footer>
