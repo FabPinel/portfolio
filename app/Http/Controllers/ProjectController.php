@@ -61,8 +61,10 @@ class ProjectController extends Controller
         return redirect()->route('dashboard');
     }
     
-    public function show($id)
+    public function show(Request $request)
     {
+        $id = $request->route('id');
+    
         $project = Project::with('stacks')->find($id);
     
         if (!$project) {
@@ -71,4 +73,19 @@ class ProjectController extends Controller
     
         return Inertia::render('Project', ['project' => $project]);
     }
+    
+
+    public function getProjectJson($id)
+    {
+        $project = Project::with('stacks')->find($id);
+
+        if (!$project) {
+            return response()->json(['error' => 'Project not found'], 404);
+        }
+
+        return response()->json(['project' => $project]);
+    }
+
+    
+    
 }

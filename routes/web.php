@@ -45,6 +45,8 @@ Route::put('/admin/projects/{project}', [ProjectController::class, 'update'])->n
 Route::delete('/admin/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/project/{id}', [ProjectController::class, 'show'])->name('getproject');
+Route::get('/project/{id}/json', [ProjectController::class, 'getProjectJson'])->name('getproject.json');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
