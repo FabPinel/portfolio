@@ -1,5 +1,5 @@
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import SwitchMode from "./SwitchMode";
 
 interface NavBarProps {
@@ -94,60 +94,66 @@ export default function NavBarSection({ darkMode, setDarkMode }: NavBarProps) {
                         </div>
                     </div>
 
-                    <Disclosure.Panel
-                        className={`${
-                            darkMode ? "bg-bgdark" : "bg-bglight"
-                        } sm:hidden z-50 fixed w-full `}
-                    >
-                        <div className="space-y-1 px-2 pb-3 pt-2">
-                            <div className="hidden sm:ml-6 sm:block">
-                                <SwitchMode
-                                    setDarkMode={setDarkMode}
-                                    darkMode={darkMode}
-                                />
+                    {open && (
+                        <Disclosure.Panel
+                            className={`${
+                                darkMode ? "bg-bgdark" : "bg-bglight"
+                            } sm:hidden z-50 fixed w-full `}
+                        >
+                            <div className="space-y-1 px-2 pb-3 pt-2">
+                                <div className="hidden sm:ml-6 sm:block">
+                                    <SwitchMode
+                                        setDarkMode={setDarkMode}
+                                        darkMode={darkMode}
+                                    />
+                                </div>
+                                <Disclosure.Button
+                                    as="a"
+                                    href="#skills"
+                                    className={`${
+                                        darkMode
+                                            ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                            : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                    } block rounded-md px-3 py-2 text-base font-medium `}
+                                >
+                                    Skills
+                                </Disclosure.Button>
+                                <Disclosure.Button
+                                    as="a"
+                                    href="#projects"
+                                    className={`${
+                                        darkMode
+                                            ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                            : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                    } block rounded-md px-3 py-2 text-base font-medium `}
+                                >
+                                    Projects
+                                </Disclosure.Button>
+                                <Disclosure.Button
+                                    as="a"
+                                    href="#education"
+                                    className={`${
+                                        darkMode
+                                            ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                            : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                    } block rounded-md px-3 py-2 text-base font-medium `}
+                                >
+                                    Education
+                                </Disclosure.Button>
+                                <Disclosure.Button
+                                    as="a"
+                                    href="#contact"
+                                    className={`${
+                                        darkMode
+                                            ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
+                                            : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
+                                    } block rounded-md px-3 py-2 text-base font-medium `}
+                                >
+                                    Contact
+                                </Disclosure.Button>
                             </div>
-                            <a
-                                href="#skills"
-                                className={`${
-                                    darkMode
-                                        ? "text-txtdark bg-secondarydark hover:bg-primarydarkhover hover:text-bgdark"
-                                        : "text-txtlight bg-secondarylight hover:bg-primarylighthover hover:text-bglight"
-                                } block rounded-md px-3 py-2 text-base font-medium `}
-                            >
-                                Skills
-                            </a>
-                            <a
-                                href="#projects"
-                                className={`${
-                                    darkMode
-                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
-                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
-                                } block rounded-md px-3 py-2 text-base font-medium `}
-                            >
-                                Projects
-                            </a>
-                            <a
-                                href="#education"
-                                className={`${
-                                    darkMode
-                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
-                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
-                                } block rounded-md px-3 py-2 text-base font-medium `}
-                            >
-                                Education
-                            </a>
-                            <a
-                                href="#contact"
-                                className={`${
-                                    darkMode
-                                        ? "text-txtdark hover:bg-primarydarkhover hover:text-bgdark"
-                                        : "text-txtlight hover:bg-primarylighthover hover:text-bglight"
-                                } block rounded-md px-3 py-2 text-base font-medium `}
-                            >
-                                Contact
-                            </a>
-                        </div>
-                    </Disclosure.Panel>
+                        </Disclosure.Panel>
+                    )}
                     <style>
                         {`
                     html {
