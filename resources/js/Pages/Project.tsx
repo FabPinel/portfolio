@@ -116,34 +116,38 @@ const ProjectDetails: React.FC<ProjectsProps> = () => {
                                 ))}
                             </div>
                             <div className="flex gap-x-6 flex-wrap mx-auto">
-                                <a
-                                    href={project.github}
-                                    className={`transition-all ease-in duration-100 ${
-                                        darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
-                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
-                                >
-                                    <FaGithub
-                                        className="w-4 h-4 me-2"
-                                        aria-hidden="true"
-                                    />
-                                    Github
-                                </a>
-                                <a
-                                    href={project.url}
-                                    className={`transition-all ease-in duration-100 ${
-                                        darkMode
-                                            ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
-                                            : "bg-primarylight hover:bg-primarylighthover text-bglight"
-                                    } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
-                                >
-                                    <FaLaptop
-                                        className="w-4 h-4 me-2"
-                                        aria-hidden="true"
-                                    />
-                                    See the project
-                                </a>
+                                {project.github && (
+                                    <a
+                                        href={project.github}
+                                        className={`transition-all ease-in duration-100 ${
+                                            darkMode
+                                                ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                                : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                        } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                    >
+                                        <FaGithub
+                                            className="w-4 h-4 me-2"
+                                            aria-hidden="true"
+                                        />
+                                        Github
+                                    </a>
+                                )}
+                                {project.url && (
+                                    <a
+                                        href={project.url}
+                                        className={`transition-all ease-in duration-100 ${
+                                            darkMode
+                                                ? "bg-primarydark hover:bg-primarydarkhover text-bgdark"
+                                                : "bg-primarylight hover:bg-primarylighthover text-bglight"
+                                        } font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mt-5`}
+                                    >
+                                        <FaLaptop
+                                            className="w-4 h-4 me-2"
+                                            aria-hidden="true"
+                                        />
+                                        See the project
+                                    </a>
+                                )}
                             </div>
                         </div>
                         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
