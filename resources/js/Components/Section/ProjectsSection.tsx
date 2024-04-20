@@ -42,7 +42,7 @@ const ProjectsSection: React.FC<ProjectsProps> = ({ darkMode }) => {
                             darkMode
                                 ? "lg:hover:bg-[#061517]"
                                 : "lg:hover:bg-[#E8F5F7]"
-                        } p-4 rounded-2xl duration-300 ease-in-out`}
+                        } p-4 rounded-2xl duration-300 ease-in-out transition-transform duration-300 hover:-translate-y-4`}
                     >
                         <div
                             aria-hidden="true"
