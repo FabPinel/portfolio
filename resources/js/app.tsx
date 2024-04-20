@@ -8,7 +8,7 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 const appName = import.meta.env.VITE_APP_NAME || "FabienPinel";
 
 createInertiaApp({
-    title: (title) => `Fabien Pinel portfolio`,
+    title: (title) => `Fabien Pinel`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.tsx`,
