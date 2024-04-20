@@ -19,8 +19,8 @@ export default function Footer({ darkMode }: FooterProps) {
             </div>
             <div className="w-full p-4 text-center">
                 <span className="text-sm text-gray-500 sm:text-center">
-                    This portfolio was made with : React JS, TypeScript,
-                    Tailwind CSS, Laravel and PhpUnit
+                    Made with : React JS, TypeScript, Tailwind CSS, Laravel and
+                    PhpUnit
                 </span>
             </div>
         </footer>
